@@ -1,0 +1,25 @@
+.landing {
+	padding: 40px;
+	background: rgb(111, 151, 167);
+	background: linear-gradient(
+		90deg,
+		rgba(111, 151, 167, 1) 0%,
+		rgba(208, 221, 226, 1) 100%
+	);
+
+	&__main {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__content {
+		max-width: 740px;
+	}
+
+	&__video {
+		max-width: 560px;
+		aspect-ratio: 16 / 9;
+		width: 100%;
+	}
+}
