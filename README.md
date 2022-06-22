@@ -1,4 +1,8 @@
-# Setup
+# Description
+
+This is a small coding example to show my proficency in React.
+
+## Setup
 
 This project was created using create-react-app so the commands will be the same.
 Set node version with `nvm use`.
