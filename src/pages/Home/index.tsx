@@ -4,10 +4,10 @@ import BreedsSection from '../../components/BreedsSection';
 
 function Home() {
 	return (
-		<>
+		<main>
 			<Landing />
 			<BreedsSection />
-		</>
+		</main>
 	);
 }
 

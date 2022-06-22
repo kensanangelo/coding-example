@@ -7,10 +7,10 @@ interface Props {
 
 const BreedCard = ({ name, imgLink }: Props) => {
 	return (
-		<div className='breed-card'>
+		<article className='breed-card'>
 			<img className='breed-card__img' src={imgLink} />
 			<h3 className='breed-card__name'>{name}</h3>
-		</div>
+		</article>
 	);
 };
 

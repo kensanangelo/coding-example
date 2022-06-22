@@ -3,7 +3,7 @@ import Header from '../Header';
 
 const Landing = () => {
 	return (
-		<div className='landing'>
+		<section className='landing'>
 			<Header />
 			<div className='landing__main'>
 				<div className='landing__content'>
@@ -29,7 +29,7 @@ const Landing = () => {
 					allowFullScreen
 				></iframe>
 			</div>
-		</div>
+		</section>
 	);
 };
 
