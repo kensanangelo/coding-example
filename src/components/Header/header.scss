@@ -28,8 +28,11 @@
 	}
 
 	&__link {
+		position: relative;
 		color: #090c0d;
 		font-size: 0.8rem;
+		text-decoration: none;
+		padding-bottom: 1px;
 
 		&:not(:last-child) {
 			margin-right: 20px;
@@ -37,6 +40,41 @@
 
 		@media screen and (min-width: 600px) {
 			font-size: 1rem;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			background-color: #090c0d;
+			height: 1px;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			transition: transform 0.3s;
+		}
+
+		&::before {
+			transform-origin: 0 50%;
+			transform: scaleX(0);
+		}
+
+		&::after {
+			transform-origin: 100% 50%;
+			transform: scaleX(1);
+			transition-delay: 0.15s;
+		}
+
+		&:hover::before,
+		&:focus::before {
+			transform: scaleX(1);
+			transition-delay: 0.15s;
+		}
+
+		&:hover::after,
+		&:focus::after {
+			transform: scaleX(0);
+			transition-delay: 0s;
 		}
 	}
 }
