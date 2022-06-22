@@ -20,7 +20,7 @@ const BreedCard = ({ name, imgLink }: Props) => {
 				)}
 				height='200px'
 				src={imgLink}
-				alt={`A photo of a ${name}`}
+				alt={`A ${name} breed of dog`}
 				onLoad={() => setLoading(false)}
 			/>
 			<h3 className='breed-card__name'>{name}</h3>

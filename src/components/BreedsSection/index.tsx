@@ -16,8 +16,12 @@ const BreedsSection = () => {
 				<Alert state='fetching' />
 			) : (
 				<div className='breeds__cards'>
-					{dogs.map((dog: DogType) => (
-						<BreedCard name={dog.name} imgLink={dog.imgLink} />
+					{dogs.map((dog: DogType, index: number) => (
+						<BreedCard
+							key={index}
+							name={dog.name}
+							imgLink={dog.imgLink}
+						/>
 					))}
 				</div>
 			)}
