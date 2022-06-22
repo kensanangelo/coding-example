@@ -2,6 +2,13 @@
 	box-shadow: 0px 0px 15px -6px #b9b9b9;
 	border-radius: 3px 3px 12px 12px;
 	overflow: hidden;
+	max-width: 310px;
+	width: 100%;
+
+	@media screen and (min-width: 650px) {
+		max-width: none;
+		width: auto;
+	}
 
 	&__img {
 		height: 200px;

@@ -18,16 +18,17 @@ const Landing = () => {
 						pulvinar leo.
 					</p>
 				</div>
-				<iframe
-					className='landing__video'
-					width='1440'
-					height='535'
-					src='https://www.youtube.com/embed/s_uiya1WsQ0'
-					title='DOGS FREE STOCK VIDEOS WITH DOGS  NO COPYRIGHT VIDEOS'
-					frameBorder='0'
-					allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-					allowFullScreen
-				></iframe>
+				<div className='landing__video'>
+					<iframe
+						width='560'
+						height='315'
+						src='https://www.youtube.com/embed/s_uiya1WsQ0'
+						title='DOGS FREE STOCK VIDEOS WITH DOGS  NO COPYRIGHT VIDEOS'
+						frameBorder='0'
+						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+						allowFullScreen
+					></iframe>
+				</div>
 			</div>
 		</section>
 	);

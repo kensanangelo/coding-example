@@ -1,13 +1,26 @@
 .header {
 	width: 100%;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 40px;
+	flex-direction: column;
+	margin-bottom: 20px;
+	max-width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media screen and (min-width: 600px) {
+		justify-content: space-between;
+		flex-direction: row;
+		margin-bottom: 40px;
+	}
 
 	&__title {
-		margin: 0;
+		margin-bottom: 20px;
 		color: white;
+
+		@media screen and (min-width: 600px) {
+			margin: 0;
+		}
 	}
 
 	&__nav {
@@ -16,9 +29,14 @@
 
 	&__link {
 		color: #090c0d;
+		font-size: 0.8rem;
 
 		&:not(:last-child) {
 			margin-right: 20px;
+		}
+
+		@media screen and (min-width: 600px) {
+			font-size: 1rem;
 		}
 	}
 }
