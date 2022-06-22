@@ -4,10 +4,10 @@ This is a small coding example to show my proficency in React.
 
 ## Setup
 
-This project was created using create-react-app so the commands will be the same.
-Set node version with `nvm use`.
-Install node modules with `npm i`.
-Use `npm start` to start dev server.
+This project was created using create-react-app so the commands will be the same.\
+Set node version with `nvm use`.\
+Install node modules with `npm i`.\
+Use `npm start` to start dev server.\
 Open browser to [http://localhost:3000](http://localhost:3000) to view.
 
 ## Available Scripts
