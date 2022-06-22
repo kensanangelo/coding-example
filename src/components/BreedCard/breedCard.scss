@@ -1,2 +1,23 @@
 .breed-card {
+	box-shadow: 0px 0px 15px -6px #b9b9b9;
+	border-radius: 3px 3px 12px 12px;
+	overflow: hidden;
+
+	&__img {
+		height: 200px;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__name {
+		height: 60px;
+		padding-right: 10px;
+		padding-left: 10px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-transform: capitalize;
+		color: #333;
+	}
 }
