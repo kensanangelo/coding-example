@@ -3,9 +3,9 @@ import Header from '../Header';
 
 const Landing = () => {
 	return (
-		<section className='landing'>
+		<div className='landing'>
 			<Header />
-			<div className='landing__main'>
+			<section className='landing__main'>
 				<div className='landing__content'>
 					<h2 className='landing__header'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -29,8 +29,8 @@ const Landing = () => {
 						allowFullScreen
 					></iframe>
 				</div>
-			</div>
-		</section>
+			</section>
+		</div>
 	);
 };
 

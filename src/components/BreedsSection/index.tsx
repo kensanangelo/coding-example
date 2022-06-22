@@ -1,7 +1,7 @@
 import './breeds.scss';
-import BreedCard from '../BreedCard';
 import { useDogContext } from '../../contexts/dogContext';
 import { DogType } from '../../types/dogTypes';
+import BreedCard from '../BreedCard';
 import Alert from '../Alert';
 
 const BreedsSection = () => {

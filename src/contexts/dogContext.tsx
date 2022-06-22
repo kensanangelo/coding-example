@@ -8,7 +8,7 @@ interface ProviderProps {
 
 type fetchingStateType = 'success' | 'fetching' | 'failed';
 
-export const DogContext = React.createContext(null as any);
+const DogContext = React.createContext(null as any);
 
 export const DogProvider = ({ children }: ProviderProps) => {
 	const [dogs, setDogs] = useState<DogType[]>([]);
@@ -23,7 +23,7 @@ export const DogProvider = ({ children }: ProviderProps) => {
 		} catch (err) {
 			setDogs([]);
 			setFetchingState('failed');
-			console.error('There was an api connection error');
+			console.error('Failed to retrieve dogs from api');
 		}
 	};
 
@@ -33,7 +33,6 @@ export const DogProvider = ({ children }: ProviderProps) => {
 
 	const value = {
 		dogs,
-		setDogs,
 		fetchingState,
 	};
 

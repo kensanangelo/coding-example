@@ -12,11 +12,13 @@ const BreedCard = ({ name, imgLink }: Props) => {
 
 	return (
 		<article className='breed-card'>
-			{loading ? <div className='breed-card__placeholder'></div> : null}
+			{loading || imgLink === '' ? (
+				<div className='breed-card__placeholder'></div>
+			) : null}
 			<img
 				className={clsx(
 					'breed-card__img',
-					loading && 'breed-card__img--hidden'
+					(loading || imgLink === '') && 'breed-card__img--hidden'
 				)}
 				height='200px'
 				src={imgLink}

@@ -3,9 +3,7 @@ import { getAllDogsApi, getDogImageApi } from '../api/dogsApi';
 
 // Takes the api message format, and converts it into a list of unique
 // dog breeds
-export const formatMessageForUniqueDogs = (
-	message: DogMessageType
-): string[] => {
+const formatMessageForUniqueDogs = (message: DogMessageType): string[] => {
 	const uniqueDogs: string[] = [];
 
 	// Loops through and adds all dog breeds to uniqueDogs and
@@ -23,10 +21,16 @@ export const formatMessageForUniqueDogs = (
 	return uniqueDogs;
 };
 
-export const getImagesForDogs = async (dogs: string[]) => {
+const getImagesForDogs = async (dogs: string[]) => {
 	const dogObjs: DogType[] = await Promise.all(
 		dogs.map(async (dog) => {
-			const img: string = await getDogImageApi(dog);
+			let img: string = '';
+
+			try {
+				img = await getDogImageApi(dog);
+			} catch (err) {
+				img = '';
+			}
 
 			return {
 				name: dog,
@@ -41,7 +45,7 @@ export const getImagesForDogs = async (dogs: string[]) => {
 export const getAllDogs = async () => {
 	const dogsMessage = await getAllDogsApi();
 	const uniqueDogs = formatMessageForUniqueDogs(dogsMessage);
-	const tempDogs = await getImagesForDogs(uniqueDogs);
+	const finalDogs = await getImagesForDogs(uniqueDogs);
 
-	return tempDogs;
+	return finalDogs;
 };
