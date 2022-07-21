@@ -8,7 +8,7 @@ interface ProviderProps {
 
 type fetchingStateType = 'success' | 'fetching' | 'failed';
 
-const DogContext = React.createContext(null as any);
+export const DogContext = React.createContext(null as any);
 
 export const DogProvider = ({ children }: ProviderProps) => {
 	const [dogs, setDogs] = useState<DogType[]>([]);

@@ -27,6 +27,7 @@ const Landing = () => {
 						frameBorder='0'
 						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
 						allowFullScreen
+						data-testid='youtube-iframe'
 					></iframe>
 				</VideoWrapper>
 			</MainSection>
