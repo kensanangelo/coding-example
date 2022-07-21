@@ -1,4 +1,3 @@
-import './home.scss';
 import Landing from '../../components/Landing';
 import BreedsSection from '../../components/BreedsSection';
 
