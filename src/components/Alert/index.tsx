@@ -2,7 +2,7 @@ import BouncingBall from './BouncingBall';
 import styled, { css } from 'styled-components';
 
 interface Props {
-	state: 'fetching' | 'error';
+	state?: 'fetching' | 'error';
 }
 
 const Alert = ({ state = 'error' }: Props) => {
